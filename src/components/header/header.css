@@ -1,0 +1,63 @@
+.header{
+	background: #000;
+	color: white;
+}
+.header-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 150px;
+}
+.header__nav{
+	font-weight: 400;
+	font-size: 18px;
+	position: relative;
+	line-height: 21px;
+	color: white;
+	text-decoration: none;
+}
+.header__nav::before{
+	content: '';
+	background: url('../../images/heart.svg');
+	position: absolute;
+	top: 0;
+	left: -25px;
+	width: 20px;
+	height: 18px;
+	background-size: cover;
+	cursor: pointer;
+}
+.logo-header{
+	max-width: 185px;
+	max-height: 72px;
+}
+.header__nav-list{
+	display: flex;
+	gap: 0 70px;
+}
+
+.header__nav-item{
+	list-style: none;
+	text-decoration: none;
+
+}
+.header__home{
+	font-weight: 400;
+	font-size: 18px;
+	position: relative;
+	line-height: 21px;
+	color: white;
+	text-decoration: none;
+}
+
+.header__home::before{
+	content: '';
+	background: url('../../images/searchBtnWht.svg');
+	position: absolute;
+	top: 0;
+	left: -25px;
+	width: 20px;
+	height: 18px;
+	background-size: cover;
+	cursor: pointer;
+}
