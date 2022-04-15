@@ -8,6 +8,7 @@ import whiteHeaert from '../../images/heart.svg'
 import { axiosInstans } from '../../API/api'
 import Isloading from '../isLoading/isLoading';
 import { isLoadingFalseAC, isLoadingTrueAC } from '../../redux/reducers/some-think-reducer';
+import { setImagesFavoritesAC } from '../../redux/reducers/favorites-reducer';
 
 const Image = (props) => {
 
@@ -18,8 +19,6 @@ const Image = (props) => {
 
 
 	const dispatch = useDispatch();
-	console.log(image);
-
 
 	const setLikeApi = () => {
 		if (likeByUser === false) {
@@ -31,6 +30,13 @@ const Image = (props) => {
 						setLikeByUser(true);
 					}
 				})
+			dispatch(isLoadingTrueAC())
+			axiosInstans.get('https://api.unsplash.com/users/alljsayonarara/likes').then(
+				res => {
+					dispatch(setImagesFavoritesAC(res.data))
+					dispatch(isLoadingFalseAC())
+				}
+			)
 		} else {
 			dispatch(isLoadingTrueAC())
 			axiosInstans.delete(`/photos/${image.id}/like?client_id=SWzrA9ZiPwBP1Rs24YSAQPVVGbKrnSzykSY-NlO_AOI`)

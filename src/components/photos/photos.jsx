@@ -16,7 +16,7 @@ const Photos = (props) => {
 
 	const imagesArray = images.map((item, index) => {
 		return (<div key={index + item} className="home__flexitem">
-			<Link onClick={() => { onClickImgCurrent(item) }} className="header__nav" to='/image'>
+			<Link onClick={() => { onClickImgCurrent(item) }} className="header__nav" to='/gallery/image'>
 				<img src={item.urls.small} key={index} alt="item" />
 			</Link>
 		</div>

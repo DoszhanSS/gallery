@@ -12,9 +12,9 @@ function App() {
 			<Provider store={store}>
 				<Router>
 					<Routes>
-						<Route path="/*" index element={<Home />} />
-						<Route path="favorites" element={<Favorites />} />
-						<Route path="image" element={<Image />} />
+						<Route path="/gallery/*" index element={<Home />} />
+						<Route path="/gallery/favorites" element={<Favorites />} />
+						<Route path="/gallery/image" element={<Image />} />
 					</Routes>
 				</Router>
 			</Provider>

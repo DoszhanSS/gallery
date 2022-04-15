@@ -26,10 +26,10 @@ const Header = () => {
 					</div>
 					<ul className={menustate ? 'header__nav-list-active header__nav-list' : 'header__nav-list'}   >
 						<li className='header__nav-item'>
-							<Link className="header__home" to='/'>поиск</Link>
+							<Link className="header__home" to='/gallery'>поиск</Link>
 						</li>
 						<li className='header__nav-item'>
-							<Link className="header__nav" to='/favorites'>Избранное</Link>
+							<Link className="header__nav" to='/gallery/favorites'>Избранное</Link>
 						</li>
 					</ul>
 				</div>
