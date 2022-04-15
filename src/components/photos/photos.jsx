@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getCurrentImgAC } from '../../redux/reduicers/image-reduicer';
+import { getCurrentImgAC } from '../../redux/reducers/image-reduicer';
 
 const Photos = (props) => {
 
 	const images = props.images;
-	console.log(images);
 
 	const dispatch = useDispatch();
 
