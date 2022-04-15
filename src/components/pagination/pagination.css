@@ -1,0 +1,17 @@
+.countPag{
+	padding: 5px 10px;
+	cursor: pointer;
+	border: 1px solid black;
+	border-radius: 5%;
+	font-size: 20px;
+	display: inline-block;
+	margin: 10px;
+	background-color: black;
+	color: white;
+	font-weight: 600;
+}
+.currentPage{
+	background-color: white;
+	color: black;
+	cursor: auto;
+}

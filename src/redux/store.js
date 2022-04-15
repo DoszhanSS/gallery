@@ -1,12 +1,16 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import homeReduicer from './reduicers/home-reduicer';
+import homeReduicer from './reducers/home-reduicer';
 import thunkMiddleware from 'redux-thunk';
-import imageReducer from './reduicers/image-reduicer';
+import imageReducer from './reducers/image-reduicer';
+import favoritesReducer from './reducers/favorites-reducer';
+import someThinkReducer from './reducers/some-think-reducer';
 
 
 let rootReducer = combineReducers({
 	home: homeReduicer,
-	image: imageReducer
+	image: imageReducer,
+	favorites: favoritesReducer,
+	someThink: someThinkReducer
 })
 
 // @ts-ignore

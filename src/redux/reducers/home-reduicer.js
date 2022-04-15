@@ -1,5 +1,6 @@
 
-const getImagesAT = 'GET_IMAGES_ACTION_TYPE'
+const GET_IMAGES_ACTION_TYPE = 'GET_IMAGES_ACTION_TYPE'
+const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 
 let iniState = {
 	images: [{
@@ -24,16 +25,22 @@ let iniState = {
 		width: null,
 	},],
 	teargetImage: 0,
+	currentPage: 1,
 }
 
 const homeReduicer = (state = iniState, action) => {
 	switch (action.type) {
-		case getImagesAT: {
+		case GET_IMAGES_ACTION_TYPE: {
 			return {
 				...state,
 				images: action.payload
 			}
-
+		}
+		case SET_CURRENT_PAGE: {
+			return {
+				...state,
+				currentPage: action.payload
+			}
 		}
 		default: {
 			return state
@@ -41,8 +48,8 @@ const homeReduicer = (state = iniState, action) => {
 	}
 }
 
-export const getImagesAC = (ArrayImages) => ({ type: getImagesAT, payload: ArrayImages });
-
+export const getImagesAC = (ArrayImages) => ({ type: GET_IMAGES_ACTION_TYPE, payload: ArrayImages });
+export const setCurrentPageAC = (currentPage) => ({ type: SET_CURRENT_PAGE, payload: currentPage });
 
 
 export default homeReduicer;

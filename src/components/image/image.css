@@ -61,6 +61,7 @@
 	height: 50px;
 	transition: all 0.2s;
 	cursor: pointer;
+	text-decoration: none;
 }
 .donwload-image-block-btn:active{
 	transition: all 0.2s;
@@ -89,4 +90,23 @@
 	width: 100%;
 	height: auto;
 	object-fit: cover;
+}
+.donwload-image-block-div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	color: black;
+	text-decoration: none;
+}
+@media (max-width: 768px) {
+	.nav-image-block{
+		flex-direction: column;
+		gap: 20px;
+		align-items: flex-start;
+		padding: 20px 0;
+	}
+	.donwload-image-block{
+		justify-content: space-between;
+	}
 }
